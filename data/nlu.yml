@@ -1,0 +1,80 @@
+version: "3.1"
+
+nlu:
+- intent: saludar
+  examples: |
+    - Hola mor
+    - Hola mi amor
+    - Hola,
+    - ¡Hola!,
+    - Buen día,
+    - Buenos días,
+    - Buenas tardes,
+    - Buenas noches,
+    - ¡Saludos!,
+    - ¡Hola a todos!,
+    - ¿Cómo están?,
+    - ¿Qué tal?,
+    - ¡Hey!,
+    - ¡Qué gusto verte!,
+    - ¡Un placer saludarte!,
+    - ¡Hola de nuevo!,
+    - ¡Hola, qué tal estás?,
+    - ¡Hola, ¿cómo va todo?,
+    - ¡Hola, espero que estés bien!
+
+- intent: despedirse
+  examples: |
+  - Adiós
+  - ¡Hasta luego!
+  - Nos vemos
+  - Hasta pronto
+  - Hasta la próxima
+  - ¡Buenas noches!
+  - ¡Que tengas un buen día!
+  - Cuídate
+  - ¡Hasta la vista!
+  - ¡Adiós, nos vemos pronto!
+  - ¡Que tengas un buen día!
+  - ¡Hasta pronto, nos vemos!
+  - ¡Adiós, que te vaya bien!
+  - ¡Nos vemos en otra ocasión!
+  - ¡Que tengas un buen viaje!
+  - ¡Hasta luego, que tengas un buen día!
+
+
+- intent: solicitud_cupo
+  examples: |
+    - Quiero solicitar cupo para la materia [nombre_materia](Matemáticas).
+    - Me gustaría inscribirme en [nombre_materia](Física).
+    - ¿Cómo puedo postularme a [nombre_materia](Historia del Arte)?
+    - Estoy interesado en estudiar [nombre_materia](Programación), ¿cómo hago para aplicar?
+    - Quiero ingresar a [nombre_materia](Química), ¿cuál es el proceso de admisión?
+
+
+- intent: horario_academico
+  examples: |
+    - ¿Cuál es el horario de [nombre_materia](Cálculo) en el programa de [programa_academico](Ingeniería de Sistemas)?
+    - ¿En qué horarios se dicta [nombre_materia](Biología) en el programa de [programa_academico](Medicina)?
+    - Necesito conocer el horario de [nombre_materia](Economía) en el programa de [programa_academico](Administración de Empresas).
+    - Quisiera saber los horarios disponibles para [nombre_materia](Diseño Gráfico) en el programa de [programa_academico](Artes Visuales).
+    - ¿Cuándo se ofrecen las clases de [nombre_materia](Psicología) en el programa de [programa_academico](Psicología Clínica)?
+    - ¿Cuáles son los horarios de las clases de [nombre_materia](Física) en el programa de [programa_academico](Ingeniería Electrónica)?
+    - Quiero conocer mi horario para [nombre_materia](Literatura) en el programa de [programa_academico](Estudios Literarios).
+    - ¿En qué días y horarios tengo clases de [nombre_materia](Química) en el programa de [programa_academico](Química Aplicada)?
+    - Necesito saber mi horario de [nombre_materia](Historia del Arte) en el programa de [programa_academico](Historia del Arte).
+    - ¿Cuándo tengo clases de [nombre_materia](Programación) en el programa de [programa_academico](Ingeniería de Software)?
+
+
+- intent: cancelacion_materias
+  examples: |
+    - Quiero cancelar la materia [nombre_materia](Cálculo) en el programa de [programa_academico](Ingeniería de Sistemas).
+    - Necesito cancelar [nombre_materia](Biología) en el programa de [programa_academico](Medicina).
+    - ¿Cómo puedo cancelar la materia [nombre_materia](Economía) en el programa de [programa_academico](Administración de Empresas)?
+    - Deseo cancelar [nombre_materia](Diseño Gráfico) en el programa de [programa_academico](Artes Visuales).
+    - ¿Cuál es el proceso para cancelar la materia [nombre_materia](Psicología) en el programa de [programa_academico](Psicología Clínica)?
+
+
+- intent: bot_info
+  examples: |
+    - Soy UniBot
