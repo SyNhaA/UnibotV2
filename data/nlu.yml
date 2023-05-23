@@ -25,22 +25,22 @@ nlu:
 
 - intent: despedirse
   examples: |
-  - Adiós
-  - ¡Hasta luego!
-  - Nos vemos
-  - Hasta pronto
-  - Hasta la próxima
-  - ¡Buenas noches!
-  - ¡Que tengas un buen día!
-  - Cuídate
-  - ¡Hasta la vista!
-  - ¡Adiós, nos vemos pronto!
-  - ¡Que tengas un buen día!
-  - ¡Hasta pronto, nos vemos!
-  - ¡Adiós, que te vaya bien!
-  - ¡Nos vemos en otra ocasión!
-  - ¡Que tengas un buen viaje!
-  - ¡Hasta luego, que tengas un buen día!
+    - Adiós
+    - ¡Hasta luego!
+    - Nos vemos
+    - Hasta pronto
+    - Hasta la próxima
+    - ¡Buenas noches!
+    - ¡Que tengas un buen día!
+    - Cuídate
+    - ¡Hasta la vista!
+    - ¡Adiós, nos vemos pronto!
+    - ¡Que tengas un buen día!
+    - ¡Hasta pronto, nos vemos!
+    - ¡Adiós, que te vaya bien!
+    - ¡Nos vemos en otra ocasión!
+    - ¡Que tengas un buen viaje!
+    - ¡Hasta luego, que tengas un buen día!
 
 
 - intent: solicitud_cupo
