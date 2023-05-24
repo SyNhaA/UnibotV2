@@ -1,48 +1,99 @@
 version: "3.1"
 
 intents:
-  - saludar
-  - despedirse
-  - solicitud_cupo
-  - horario_academico
-  - cancelacion_materias
-  - bot_info
-  
-entities:
-  - programa_academico
-  - nombre_materia
-  - fecha
-  - nombre_estudiante
-
-actions:
-  - action_solicitud_cupo
-  - action_horario_academico
-  - action_cancelacion_materias
-  - action_informacion_programas
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - tell_materia
+  - tell_requisitos
+  - tell_calendario
+  - tell_grado
+  - tell_apoyo
+  - tell_preguntas
+  - tell_ayuda
+  - tell_informacion
 
 responses:
-  utter_solicitud_cupo:
-    - text: "Para realizar una solicitud de cupo en nuestra universidad, debes completar el formulario en línea disponible en nuestro sitio web. Además, necesitarás proporcionar tus datos personales, documentos académicos y cualquier otro requisito específico del programa al que deseas aplicar. Una vez que hayas enviado la solicitud, nuestro equipo de admisiones la revisará y se pondrá en contacto contigo con respecto al proceso de selección."
+  utter_greet:
+  - text: "Hey! Soy UniBot ¿En que te puedo ayudar? "
 
-  utter_horario_academico:
-    - text: "Puedes encontrar tu horario académico ingresando a nuestro sistema en línea con tu nombre de usuario y contraseña. Una vez que hayas iniciado sesión, podrás acceder a tu horario actualizado con los días, horarios y aulas asignadas para cada una de tus asignaturas. Si tienes alguna pregunta adicional sobre tu horario, no dudes en contactar a la oficina de registros y matrícula."
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
 
-  utter_cancelacion_materias:
-    - text: "Si deseas cancelar una materia, debes comunicarte con la oficina de registros y matrícula lo antes posible. Recuerda que existen fechas límite para realizar cambios en la inscripción. La cancelación de una materia puede tener implicaciones en tu progreso académico y carga crediticia, por lo que te recomendamos consultar con tu asesor académico antes de tomar una decisión."
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Adios, espero haberte ayudado"
 
   utter_iamabot:
-    - text: "Soy UniBot, un bot para solucionar tus inquietudes acerca de la Uniquindio."
+  - text: "Soy un bot, powered by Rasa."
 
-slots:
-  programa_academico:
-    type: categorical
-    values:
-      - Ingenieria
-      - Medicina
-      - Artes
-    mappings:
-    -type: from_entity
-    entity: programa_academico
+  utter_materia:
+  - text: "analisis de algoritmos."
+
+  utter_requisitos:
+  - text: "Los requisitos para realizar la inscripcion a cualquier programa de la universidad son:\n
+  - Documento de identidad del aspirante.\n
+  - Realizar previamente el proceso de Pre-Inscripción y el número de formulario o PIN el cual lo genera el sistema.\n
+  - Cuenta de Correo Electrónico vigente.\n
+  - Foto digital frontal, en formato JPG, fondo blanco, tamaño 4x5 cms. Esta fotografía será la que se utilice para expedir posteriormente su carné en caso de ser\n admitido, si la foto no cumple con estos requisitos no se tomará en cuenta y será rechazada.\n\n
+  \nEn caso de no cumplir con uno de estos requisitos, no podrá realizar el Proceso de Inscripción.\n
+  \nEl proceso de selección y admisión para usted como aspirante, dependerá de los criterios establecidos por cada Programa Académico, por ende deberá enterarse con la correspondiente dirección o secretaría.\n
+  Como mínimo deberá aportar la siguiente documentación siguiendo el conducto regular que se ha establecido en el programa académico inscrito, como mínimo se solicitará:\n
+  -Documento de identidad.\n
+  -Diploma o Acta de Grado de pregrado.\n
+  -Si usted sufragó en la segunda vuelta presidencial, el correspondiente Certificado Electoral."
+
+  utter_calendario:
+    - text: "Puedes encontrar el calendario académico en el siguiente link:(https://www.uniquindio.edu.co/programas/publicaciones/707/calendario-academico-periodo-2023-i/)."
+
+  utter_grado:
+    - text: "los requisitos de grado para todos los programas sigue la siguente conducta:\n
+    - Aprobar todos los créditos académicos contemplados en el respectivo plan de estudios.\n
+    - Cursar la cátedra multidisciplinar.\n
+    - Presentar la constancia de pruebas Saber Pro o Saber TyT según el nivel de formación.\n
+    - Estar a paz y salvo académica y financieramente con la Universidad.\n
+    - Demostrar la competencia en segunda lengua, de acuerdo al nivel de formación del programa (tecnológico, profesional).\n
+    - Realizar el trabajo de grado, práctica, pasantía o la modalidad que corresponda, según el reglamento de trabajos de grado de la facultad a la cual esté adscrito el programa académico cursado por el estudiante.\n"
+
+  utter_apoyo:
+    - text: "Estos son los principales servicios de apoyo estudiantil que ofrece la universidad del Quindío:\n
+    -Orientación psicológica.\n
+    -Servicio de comedor estudiantil.\n
+    -Subsidio de transporte.\n
+    -Apoyo gubernamental (Jóvenes en acción, centro de sostenimiento ICETEX, política de estado de gratuidad en la matrícula (PEGM)).\n
+    -Centro de salud (Servicios médicos, Programas y áreas de Prevención).\n
+    -Apoyos académicos (Grupos de estudio - TANGARA).\n
+    -Centro de acondicionamiento físico.\n
+    si quieres conocer más acerca de estos apoyos puedes visitar: (https://www.uniquindio.edu.co/bienestar/)"
+
+  utter_preguntas:
+    - text: "Claro que si, las preguntas frecuentes las puedes encontrar aquí: (https://www.uniquindio.edu.co/csu/publicaciones/2134/preguntas-constantes/)"
+
+  utter_ayuda:
+    - text: "Claro, puedes contactarnos por nuestros canales de atención: (https://www.uniquindio.edu.co/publicaciones/220/canales-de-atencion/)\n
+    O si tienes una pregunta más especifica y eres estudiante puedes ingresar en servicios en línea e ingresar aqui: (https://csuuq.uniquindio.edu.co/gcsapp/#!/inicio)
+    Si eres una persona externa a la universidad puedes ingresar aqui: (https://csuuq.uniquindio.edu.co/gcsapp/#!/accesoPublico)"
+
+  utter_informacion:
+    - text: "Claro que si:\n
+    Fáber Danilo Giraldo Velásquez\n
+    Ingeniero de Sistemas y Computación, Magíster en Ingeniería, PhD en Informática\n
+    Ingeniero de Sistemas y Computación con experiencia en procesos de investigación aplicada e innovación, y docencia en Educación Superior.\n
+    Actualmente Docente de Planta e Investigador en la Universidad del Quindío (Colombia).\n
+    Experiencia comprobada en formulación, ejecución y evaluación de proyectos de I+D+I.\n
+    Capacidades de liderazgo, trabajo en equipos interdisciplinarios, ejecución/coordinación de proyectos de I+D, y acompañamiento a sector productivo.\n
+    información de contacto: (https://www.linkedin.com/in/fdgiraldo/)"
 
 session_config:
   session_expiration_time: 60

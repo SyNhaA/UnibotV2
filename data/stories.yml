@@ -2,9 +2,85 @@ version: "3.1"
 
 stories:
 
-- story: solicitud materia
+- story: happy path
   steps:
-  - intent: saludar
-  - action: utter_solicitud_cupo
-  - intent: despedirse
-  - action: action_informacion_programas
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: happy materia path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: tell_materia
+    - action: utter_materia
+
+- story: happy requisitos path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: tell_requisitos
+    - action: utter_requisitos
+
+- story: happy calendario path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: tell_calendario
+    - action: utter_calendario
+
+- story: happy grado path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: tell_grado
+    - action: utter_grado
+
+- story: happy apoyo path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: tell_apoyo
+    - action: utter_apoyo
+
+- story: happy preguntas path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: tell_preguntas
+    - action: utter_preguntas
+
+- story: happy ayuda path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: tell_ayuda
+    - action: utter_ayuda
+
+- story: happy informacion path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: tell_informacion
+    - action: utter_informacion

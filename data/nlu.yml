@@ -1,80 +1,151 @@
 version: "3.1"
 
 nlu:
-- intent: saludar
+- intent: greet
   examples: |
-    - Hola mor
-    - Hola mi amor
-    - Hola,
-    - ¡Hola!,
-    - Buen día,
-    - Buenos días,
-    - Buenas tardes,
-    - Buenas noches,
-    - ¡Saludos!,
-    - ¡Hola a todos!,
-    - ¿Cómo están?,
-    - ¿Qué tal?,
-    - ¡Hey!,
-    - ¡Qué gusto verte!,
-    - ¡Un placer saludarte!,
-    - ¡Hola de nuevo!,
-    - ¡Hola, qué tal estás?,
-    - ¡Hola, ¿cómo va todo?,
-    - ¡Hola, espero que estés bien!
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hola
+    - buenas tardes
+    - buenos dias
+    - buenas noches
 
-- intent: despedirse
+- intent: goodbye
   examples: |
-    - Adiós
-    - ¡Hasta luego!
-    - Nos vemos
-    - Hasta pronto
-    - Hasta la próxima
-    - ¡Buenas noches!
-    - ¡Que tengas un buen día!
-    - Cuídate
-    - ¡Hasta la vista!
-    - ¡Adiós, nos vemos pronto!
-    - ¡Que tengas un buen día!
-    - ¡Hasta pronto, nos vemos!
-    - ¡Adiós, que te vaya bien!
-    - ¡Nos vemos en otra ocasión!
-    - ¡Que tengas un buen viaje!
-    - ¡Hasta luego, que tengas un buen día!
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - adios
+    - chao
+    - gracias
 
-
-- intent: solicitud_cupo
+- intent: affirm
   examples: |
-    - Quiero solicitar cupo para la materia [nombre_materia](Matemáticas).
-    - Me gustaría inscribirme en [nombre_materia](Física).
-    - ¿Cómo puedo postularme a [nombre_materia](Historia del Arte)?
-    - Estoy interesado en estudiar [nombre_materia](Programación), ¿cómo hago para aplicar?
-    - Quiero ingresar a [nombre_materia](Química), ¿cuál es el proceso de admisión?
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
 
-
-- intent: horario_academico
+- intent: deny
   examples: |
-    - ¿Cuál es el horario de [nombre_materia](Cálculo) en el programa de [programa_academico](Ingeniería de Sistemas)?
-    - ¿En qué horarios se dicta [nombre_materia](Biología) en el programa de [programa_academico](Medicina)?
-    - Necesito conocer el horario de [nombre_materia](Economía) en el programa de [programa_academico](Administración de Empresas).
-    - Quisiera saber los horarios disponibles para [nombre_materia](Diseño Gráfico) en el programa de [programa_academico](Artes Visuales).
-    - ¿Cuándo se ofrecen las clases de [nombre_materia](Psicología) en el programa de [programa_academico](Psicología Clínica)?
-    - ¿Cuáles son los horarios de las clases de [nombre_materia](Física) en el programa de [programa_academico](Ingeniería Electrónica)?
-    - Quiero conocer mi horario para [nombre_materia](Literatura) en el programa de [programa_academico](Estudios Literarios).
-    - ¿En qué días y horarios tengo clases de [nombre_materia](Química) en el programa de [programa_academico](Química Aplicada)?
-    - Necesito saber mi horario de [nombre_materia](Historia del Arte) en el programa de [programa_academico](Historia del Arte).
-    - ¿Cuándo tengo clases de [nombre_materia](Programación) en el programa de [programa_academico](Ingeniería de Software)?
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
 
-
-- intent: cancelacion_materias
+- intent: mood_great
   examples: |
-    - Quiero cancelar la materia [nombre_materia](Cálculo) en el programa de [programa_academico](Ingeniería de Sistemas).
-    - Necesito cancelar [nombre_materia](Biología) en el programa de [programa_academico](Medicina).
-    - ¿Cómo puedo cancelar la materia [nombre_materia](Economía) en el programa de [programa_academico](Administración de Empresas)?
-    - Deseo cancelar [nombre_materia](Diseño Gráfico) en el programa de [programa_academico](Artes Visuales).
-    - ¿Cuál es el proceso para cancelar la materia [nombre_materia](Psicología) en el programa de [programa_academico](Psicología Clínica)?
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
 
-
-- intent: bot_info
+- intent: mood_unhappy
   examples: |
-    - Soy UniBot
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: tell_materia
+  examples: |
+    - que materia es maluca?
+    - cual es la peor materia?
+    - dime una materia
+    - cual es la mejor materia?
+
+- intent: tell_requisitos
+  examples: |
+    - que requisitos necesito para entrar a una carrera en la universidad?
+    - que requisitos necesito para entrar a ingenieria de sistemas?
+    - que requisitos necesito para entrar a medicina?
+    - que requisitos necesito para entrar a biologia?
+
+- intent: tell_calendario
+  examples: |
+    - cual es el calendario academico de este semestre?
+    - cual es el calendario academico?
+    - puedes decirme cual es el calendario academico?
+    - puedes decirme cual es el calendario academico de la universidad?
+    - cual es el calendario academico de la universidad?
+
+- intent: tell_grado
+  examples: |
+    - cuales son los requisitos de grado?
+    - cuales son los requisitos de grado en ingenieria de sistemas?
+    - cuales son los requisitos de grado de programa de la universidad?
+
+- intent: tell_apoyo
+  examples: |
+    - cuales son los servicios de apoyo estudiantil?
+    - cuales son los servicios de apoyo estudiantil de la universidad?
+    - cuales son los servicios de apoyo estudiantil que ofrece la universidad?
+    - que servicios de apoyo estudiantil ofrece la universidad?
+
+- intent: tell_preguntas
+  examples: |
+    - tienes un apartado para preguntas frecuentes?
+    - te han hecho preguntas frecuentes?
+    - hay preguntas que te hayan hecho frecuentemente?
+
+- intent: tell_ayuda
+  examples: |
+    - quiero hablar con una persona real
+    - puedo hablar con una persona real?
+    - puedo contactar con una persona real?
+
+- intent: tell_informacion
+  examples: |
+    - puedes darme informacion de el profesor faber?
+    - puedes darme informacion sobre el profesor faber?
+    - quien es el profesor faber?
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
