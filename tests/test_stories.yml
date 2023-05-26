@@ -89,3 +89,283 @@ stories:
       are you a bot?
     intent: bot_challenge
   - action: utter_iamabot
+
+- story: happy requisitos path
+  steps:
+    - user: |
+        hey
+      intent: greet
+    - action: utter_greet
+    - user: |
+        que requisitos necesito para entrar a ingenieria de sistemas?
+      intent: tell_requisitos
+    - action: utter_requisitos
+
+- story: happy calendario path
+  steps:
+    - user: |
+        hello there!
+      intent: greet
+    - action: utter_greet
+    - user: |
+        cual es el calendario academico de este semestre?
+      intent: tell_calendario
+    - action: utter_calendario
+
+- story: happy grado path
+  steps:
+    - user: |
+        hi
+      intent: greet
+    - action: utter_greet
+    - user: |
+        cuales son los requisitos de grado en ingenieria de sistemas?
+      intent: tell_grado
+    - action: utter_grado
+
+- story: happy apoyo path
+  steps:
+    - user: |
+        hey dude
+      intent: greet
+    - action: utter_greet
+    - user: |
+        cuales son los servicios de apoyo estudiantil de la universidad?
+      intent: tell_apoyo
+    - action: utter_apoyo
+
+- story: happy preguntas path
+  steps:
+    - user: |
+        hello
+      intent: greet
+    - action: utter_greet
+    - user: |
+        tienes un apartado para preguntas frecuentes?
+      intent: tell_preguntas
+    - action: utter_preguntas
+
+- story: happy ayuda path
+  steps:
+    - user: |
+        goodmorning
+      intent: greet
+    - action: utter_greet
+    - user: |
+        puedo hablar con una persona real?
+      intent: tell_ayuda
+    - action: utter_ayuda
+
+- story: happy informacion path
+  steps:
+    - user: |
+        hi
+      intent: greet
+    - action: utter_greet
+    - user: |
+        puedes darme informacion de el profesor faber?
+      intent: tell_informacion
+    - action: utter_informacion
+
+- story: happy requisitos path (greet in Spanish)
+  steps:
+    - user: |
+        hola
+      intent: greet
+    - action: utter_greet
+    - user: |
+        que requisitos necesito para entrar a biologia?
+      intent: tell_requisitos
+    - action: utter_requisitos
+
+- story: happy calendario path (greet in Spanish)
+  steps:
+    - user: |
+        buenas tardes
+      intent: greet
+    - action: utter_greet
+    - user: |
+        cual es el calendario academico de la universidad?
+      intent: tell_calendario
+    - action: utter_calendario
+
+- story: happy grado path (greet in Spanish)
+  steps:
+    - user: |
+        buenos dias
+      intent: greet
+    - action: utter_greet
+    - user: |
+        cuales son los requisitos de grado de programa de la universidad?
+      intent: tell_grado
+    - action: utter_grado
+
+- story: happy apoyo path (greet in Spanish)
+  steps:
+    - user: |
+        hola
+      intent: greet
+    - action: utter_greet
+    - user: |
+        cuales son los servicios de apoyo estudiantil que ofrece la universidad?
+      intent: tell_apoyo
+    - action: utter_apoyo
+
+- story: happy preguntas path (greet in Spanish)
+  steps:
+    - user: |
+        buenos dias
+      intent: greet
+    - action: utter_greet
+    - user: |
+        hay preguntas que te hayan hecho frecuentemente?
+      intent: tell_preguntas
+    - action: utter_preguntas
+
+- story: happy ayuda path (greet in Spanish)
+  steps:
+    - user: |
+        hola
+      intent: greet
+    - action: utter_greet
+    - user: |
+        puedo contactar con una persona real?
+      intent: tell_ayuda
+    - action: utter_ayuda
+
+- story: happy informacion path (greet in Spanish)
+  steps:
+    - user: |
+        buenos dias
+      intent: greet
+    - action: utter_greet
+    - user: |
+        puedes darme informacion sobre el profesor faber?
+      intent: tell_informacion
+    - action: utter_informacion
+
+- story: happy path 1 (mood_great)
+  steps:
+    - user: |
+        amazing
+      intent: mood_great
+    - action: utter_happy
+
+- story: happy path 2 (mood_unhappy)
+  steps:
+    - user: |
+        my day was horrible
+      intent: mood_unhappy
+    - action: utter_sad
+
+- story: happy path 3 (tell_materia)
+  steps:
+    - user: |
+        dime una materia
+      intent: tell_materia
+    - action: utter_materia
+
+- story: happy path 4 (goodbye)
+  steps:
+    - user: |
+        adios
+      intent: goodbye
+    - action: utter_goodbye
+
+- story: happy path 5 (affirm)
+  steps:
+    - user: |
+        yes
+      intent: affirm
+    - action: utter_affirm
+
+- story: happy path 6 (deny)
+  steps:
+    - user: |
+        no
+      intent: deny
+    - action: utter_deny
+
+- story: happy path 7 (bot_challenge)
+  steps:
+    - user: |
+        are you a bot?
+      intent: bot_challenge
+    - action: utter_bot_challenge
+
+- story: happy path with affirm (greet in Spanish)
+  steps:
+    - user: |
+        buen dia
+      intent: greet
+    - action: utter_greet
+    - user: |
+        si, correcto
+      intent: affirm
+    - action: utter_happy
+
+- story: happy path with deny (greet in Spanish)
+  steps:
+    - user: |
+        hola
+      intent: greet
+    - action: utter_greet
+    - user: |
+        no, gracias
+      intent: deny
+    - action: utter_default
+
+- story: happy path with mood_great (greet in Spanish)
+  steps:
+    - user: |
+        buenas tardes
+      intent: greet
+    - action: utter_greet
+    - user: |
+        me siento maravilloso
+      intent: mood_great
+    - action: utter_happy
+
+- story: happy path with mood_unhappy (greet in Spanish)
+  steps:
+    - user: |
+        hola
+      intent: greet
+    - action: utter_greet
+    - user: |
+        estoy triste
+      intent: mood_unhappy
+    - action: utter_sad
+
+- story: happy path with tell_materia (greet in Spanish)
+  steps:
+    - user: |
+        buenos dias
+      intent: greet
+    - action: utter_greet
+    - user: |
+        dime una materia
+      intent: tell_materia
+    - action: utter_materia
+
+- story: happy path with bot_challenge (greet in Spanish)
+  steps:
+    - user: |
+        hola
+      intent: greet
+    - action: utter_greet
+    - user: |
+        Eres un bot?
+      intent: bot_challenge
+    - action: utter_bot
+
+- story: goodbye path (greet in Spanish)
+  steps:
+    - user: |
+        buenas noches
+      intent: greet
+    - action: utter_greet
+    - user: |
+        adios
+      intent: goodbye
+    - action: utter_goodbye
